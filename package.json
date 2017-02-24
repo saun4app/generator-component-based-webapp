@@ -1,0 +1,13 @@
+{
+  "name": "generator-generator-component-based-webapp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "generator-component-based-webapp",
+  "files": [
+    "generators"
+  ],
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
+}
