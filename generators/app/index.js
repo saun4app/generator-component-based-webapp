@@ -16,28 +16,19 @@ const svn_ultimate = require('node-svn-ultimate');
 module.exports = class extends Generator {
     constructor(args, opts) {
         super(args, opts);
+        this.helper_obj = new GeneratorHelper();
+    }
 
-        const done = this.async();
-        _get_config();
-
-        function _get_config() {
-            const url = 'https://github.com/saun4app/generator-component-based-webapp/raw/master/_config_dir/_seed_template_config.json';
-            request(url, function(error, response, body) {
-                if (!error && response.statusCode == 200) {
-                    var _template_config = JSON.parse(body);
-                    console.log(_template_config);
-                }
-                done();
-            })
-        }
+    initializing() {
+        let self = this;
+        const done_function = this.async();
+        this.helper_obj.get_template_config(this, done_function);
     }
 
     prompting() {
-
         let self = this;
 
-        this.log(__dirname);
-
+        this.log(self._template_config);
         this.prompt([{
                 type: 'list',
                 name: "template_name_key",
@@ -70,5 +61,17 @@ module.exports = class extends Generator {
                 self.log('cool feature', answers.cool);
             });
         }
+    }
+}
+
+class GeneratorHelper {
+    get_template_config(caller_obj, done_function) {
+        const url = 'https://github.com/saun4app/generator-component-based-webapp/raw/master/_config_dir/_seed_template_config.json';
+        request(url, function(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                caller_obj._template_config = JSON.parse(body);
+            }
+            done_function(error);
+        });
     }
 }
