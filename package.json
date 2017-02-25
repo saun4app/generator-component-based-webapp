@@ -28,6 +28,7 @@
     "chalk": "latest",
     "jsonfile": "latest",
     "node-svn-ultimate": "latest",
+    "request": "^2.79.0",
     "shelljs": "latest",
     "snake-case": "latest",
     "yeoman-generator": "^1.0.0",

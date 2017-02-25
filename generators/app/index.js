@@ -4,15 +4,34 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const jsonfile = require('jsonfile')
 const find_up = require('find-up');
+const request = require('request');
 const snake_case = require('snake-case');
 const yosay = require('yosay');
 const shelljs = require('shelljs');
 const svn_ultimate = require('node-svn-ultimate');
 
-const tpt_config_file = find_up.sync('_seed_template_config.json');
+// const tpt_config_file = find_up.sync('_seed_template_config.json');
 // const _template_config = jsonfile.readFileSync('../../_seed_template_config.json');
-console.log(tpt_config_file);
+// console.log(tpt_config_file);
 module.exports = class extends Generator {
+    constructor(args, opts) {
+        super(args, opts);
+
+        const done = this.async();
+        _get_config();
+
+        function _get_config() {
+            const url = 'https://github.com/saun4app/generator-component-based-webapp/raw/master/_config_dir/_seed_template_config.json';
+            request(url, function(error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    var _template_config = JSON.parse(body);
+                    console.log(_template_config);
+                }
+                done();
+            })
+        }
+    }
+
     prompting() {
 
         let self = this;
