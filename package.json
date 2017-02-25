@@ -1,13 +1,39 @@
 {
-  "name": "generator-generator-component-based-webapp",
+  "name": "generator-component-based-webapp",
   "version": "0.0.1",
   "private": true,
   "description": "generator-component-based-webapp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saun4app/generator-component-based-webapp"
+  },
+  "author": {
+    "name": "Saun Shewaown",
+    "email": "saun4app@gmail.com",
+    "url": "https://github.com/saun4app/generator-component-based-webapp"
+  },
+  "homepage": "https://github.com/saun4app/generator-component-based-webapp",
   "files": [
     "generators"
   ],
-  "keywords": ["yeoman-generator"],
+  "main": "generators/index.js",
+  "keywords": [
+    "gulp",
+    "webpack",
+    "es6",
+    "yeoman-generator"
+  ],
   "dependencies": {
-    "yeoman-generator": "^1.0.0"
+    "chalk": "latest",
+    "jsonfile": "latest",
+    "node-svn-ultimate": "latest",
+    "shelljs": "latest",
+    "snake-case": "latest",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^1.1.0"
+  },
+  "devDependencies": {
+    "find-up": "^2.1.0"
   }
 }
