@@ -25,11 +25,15 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
     "chalk": "latest",
     "jsonfile": "latest",
-    "node-svn-ultimate": "latest",
+    "node-svn-ultimate": "^1.0.4",
     "request": "^2.79.0",
-    "shelljs": "latest",
+    "shelljs": "^0.7.6",
+    "shelljs-github-user": "^0.7.6",
     "snake-case": "latest",
     "yeoman-generator": "^1.0.0",
     "yosay": "^1.1.0"

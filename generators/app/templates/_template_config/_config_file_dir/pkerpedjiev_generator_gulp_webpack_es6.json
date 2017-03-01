@@ -1,0 +1,75 @@
+{
+  "name_key": "pkerpedjiev_generator_gulp_webpack_es6",
+  "github_url": "https://github.com/pkerpedjiev/generator-gulp-webpack-es6/tree/master/generators/app/templates",
+  "svn_url": "https://github.com/pkerpedjiev/generator-gulp-webpack-es6/trunk/generators/app/templates",
+  "app_root_path": "app",
+  "module_root_path": "app/scripts/module",
+  "file_map": {
+    "fs_copy": [{
+        "templatePath": "gulpfile.babel.js",
+        "destinationPath": "gulpfile.babel.js"
+				}, {
+        "templatePath": ".eslintrc",
+        "destinationPath": ".eslintrc"
+				}, {
+        "templatePath": ".babelrc",
+        "destinationPath": ".babelrc"
+				}, {
+        "templatePath": "app/styles/mymodule.css",
+        "destinationPath": "app/styles/main.css"
+				}, {
+        "templatePath": "app/scripts/mymodule.js",
+        "destinationPath": "app/scripts/main.js"
+				}, {
+        "templatePath": "app/scripts/helper_module.js",
+        "destinationPath": "app/scripts/helper_module.js"
+				}
+			],
+    "fs_tpl_copy": [{
+        "templatePath": "_package.json",
+        "destinationPath": "package.json"
+				}, {
+        "templatePath": "_bower.json",
+        "destinationPath": "bower.json"
+				}, {
+        "templatePath": "webpack.config.js",
+        "destinationPath": "webpack.config.js"
+				}, {
+        "templatePath": "webpack_dev.config.js",
+        "destinationPath": "webpack_dev.config.js"
+				}, {
+        "templatePath": "app/index.html",
+        "destinationPath": "app/index.html"
+				}
+			]
+  },
+  "prompt_item_array": [{
+      "type": "input",
+      "name": "name",
+      "message": "The project name (Default to current folder name)",
+      "default": ""
+			}, {
+      "type": "input",
+      "name": "description",
+      "message": "A description of your project",
+      "default": ""
+			}, {
+      "type": "input",
+      "name": "homepage",
+      "message": "The home page of the project",
+      "default": ""
+			}, {
+      "type": "input",
+      "name": "author",
+      "message": "Author's name",
+      "default": "",
+      "default_key": "name"
+			}, {
+      "type": "input",
+      "name": "email",
+      "message": "Author's email",
+      "default": "",
+      "default_key": "email"
+			}
+		]
+}

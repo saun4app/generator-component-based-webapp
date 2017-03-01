@@ -1,0 +1,27 @@
+{
+  "name": "<%= name %>",
+  "version": "0.1.0",
+  "homepage": "<%= homepage %>",
+  "authors": [
+    "<%= author %> <<%= email %>>"
+  ],
+  "description": "<%= description %>",
+  "main": [
+    "dist/scripts/<%= name %>.js"
+  ],
+  "moduleType": "es6",
+  "keywords": [ ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.13",
+    "jquery": "~2.2.0"
+  },
+  "version": "0.8.1"
+}
